@@ -6,7 +6,7 @@ body {
 
 h1 {
     color: white;
-    /* background-color: blue; */
+    font-size: 300%;
 }
 
 .city-search {
@@ -40,4 +40,8 @@ h1 {
     padding: 10px;
     background-color: #D9D7D7;
     color: black;
+}
+
+h2 {
+    font-size: 200%;
 }
