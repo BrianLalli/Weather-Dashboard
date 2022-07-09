@@ -8,7 +8,7 @@ The task for this challenge was to create a weather dashboard.
 <br>
 
 ## Mock Up
-![Mock Up](./assets/images/Mock%20Up.png)
+![Mock Up](./assets/images/06-server-side-apis-homework-demo.png)
 
 ## How It Works
 First, you are brought to a landing page showing you the time and day.
@@ -20,8 +20,6 @@ Then, you can click into a timeblock and type an event.
 Next, click the save button to lock in your event.
 ![Save event button](./assets/images/Save%20Button.png)
 
-The colors represent whether that timeblock is in the past, present, or future relative to the current time.
-![Mock Up](./assets/images/Screen%20Shot%202022-07-08%20at%208.31.18%20AM.png)
 
 <br>
 
