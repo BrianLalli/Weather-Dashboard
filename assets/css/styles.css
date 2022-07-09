@@ -1,0 +1,43 @@
+body {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 16px;
+  }
+
+
+h1 {
+    color: white;
+    /* background-color: blue; */
+}
+
+.city-search {
+    color: black;
+    font-size: 200%;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.current-day {
+    margin-top: 10px;
+}
+
+.custom-header {
+    background-image: url(https://image.shutterstock.com/image-photo/blue-sky-background-260nw-277059062.jpg);
+}
+
+.card {
+    background-color: #1B365C;
+    color:white;
+}
+
+.five-day {
+    background-color: white;
+    max-width:fit-content;
+}
+
+#historyBtn {
+    padding: 10px;
+    background-color: #D9D7D7;
+    color: black;
+}
