@@ -25,6 +25,7 @@ var date3 = moment().format("MMMM, Do, YYYY");
 var date4 = moment().format("MMMM, Do, YYYY");
 var currentUvIndex = document.querySelector('#currentUvIndex');
 
+
 function getLatLon() {
     userSearch = $("#search-input").val()
     var geoAPIurl = `http://api.openweathermap.org/geo/1.0/direct?q=${userSearch}&limit=5&appid=${apiKey}`
@@ -58,15 +59,14 @@ function currentForecast() {
             $("#currentDate").text(currentDate)
             // CHANGE BACKGROUND COLOR OF UV INDEX DEPENDING ON SEVERITY
             if (data.current.uvi <= 3) {
-                $("#currentUvIndex").css("color", "green");
+                $("#currentUvIndex").css("color", "green").append(" favorable", ["../icons/../icons/cloudy.svg"]);
             } else if (data.current.uvi >= 3.1 && data.current.uvi <= 6) {
-                $("#currentUvIndex").css("color", "orange");
+                $("#currentUvIndex").css("color", "orange").append(" moderate", ["../icons/cloud-sun.svg"]);
             } else if (data.current.uvi >= 6.1 && data.current.uvi <= 10) {
-                $("#currentUvIndex").css("color", "red",);
+                $("#currentUvIndex").css("color", "red",).append(" severe", ["../icons/sun.svg"]);
             } else if (data.current.uvi >= 10.1) {
                 $("#currentUvIndex").css({ "color": "black", "font-size": "200%" });
             }
-
             // APPEND TO PAGE DAY 0
             $("#temp0").text(data.daily[0].temp.day)
             $("#wind0").text(data.daily[0].wind_speed)
@@ -103,15 +103,7 @@ function currentForecast() {
 $("#SearchBtn").on('click', getLatLon)
 
 // SAVE TO LOCAL STORAGE
-$("#SearchBtn").on('click', function(){
+$("#SearchBtn").on('click', function () {
     var textToSave = $("#search-input").val();
     localStorage.setItem("userSearch", textToSave);
 });
-
-
-
-
-
-
-// https://home.openweathermap.org/api_keys
-// https://momentjs.com/docs/#/displaying/

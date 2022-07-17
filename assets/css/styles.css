@@ -1,7 +1,7 @@
 body {
     font-family: 'Titillium Web', sans-serif;
     font-size: 16px;
-  }
+}
 
 
 h1 {
@@ -28,12 +28,12 @@ h1 {
 
 .card {
     background-color: #1B365C;
-    color:white;
+    color: white;
 }
 
 .five-day {
     background-color: white;
-    max-width:fit-content;
+    max-width: fit-content;
 }
 
 #historyBtn {
@@ -45,4 +45,3 @@ h1 {
 h2 {
     font-size: 200%;
 }
-
