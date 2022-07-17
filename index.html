@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,700;1,200&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/reset.css">
@@ -31,33 +33,34 @@
                 <div class="font-weight-bold custom-border custom-text city-search">Search for a City:</div>
                 <div>
                     <input id="search-input" class="form-input w-100 custom-search" type="text"
-                        placeholder="Search-btn">
+                        placeholder="Search-bar">
                 </div>
                 <br>
-                <div><button id="historyBtn" type="button" class="btn btn-primary w-100">Search</button></div>
+                <div><button id="SearchBtn" type="button" class="btn btn-primary w-100">Search</button></div>
                 <hr>
-                <div><button id="historyBtn" type="button" class="btn btn-primary w-100">Houston</button></div>
+                <div><button id="historyBtn1" type="button" class="btn btn-primary w-100">Houston</button></div>
                 <hr>
-                <div><button id="historyBtn" type="button" class="btn btn-primary w-100">Los Angeles</button></div>
+                <div><button id="historyBtn2" type="button" class="btn btn-primary w-100">Los Angeles</button></div>
                 <hr>
-                <div><button id="historyBtn" type="button" class="btn btn-primary w-100">Chicago</button></div>
+                <div><button id="historyBtn3" type="button" class="btn btn-primary w-100">Chicago</button></div>
                 <hr>
-                <div><button id="historyBtn" type="button" class="btn btn-primary w-100">Miami</button></div>
+                <div><button id="historyBtn4" type="button" class="btn btn-primary w-100">Miami</button></div>
                 <hr>
-                <div><button id="historyBtn" type="button" class="btn btn-primary w-100">Scranton</button></div>
+                <div><button id="historyBtn5" type="button" class="btn btn-primary w-100">Scranton</button></div>
                 <hr>
-                <div><button id="historyBtn" type="button" class="btn btn-primary w-100">Nashville</button></div>
+                <div><button id="historyBtn6" type="button" class="btn btn-primary w-100">Nashville</button></div>
             </div>
 
             <!-- Current city weather data -->
             <div class="col-9 custom-line-height current-day">
                 <div class="border border-dark custom-border">
-                    <div id="citySearched date-today" class="font-weight-bold">Austin (07/09/2022)</div>
+                    <div id="citySearched date-today" class="font-weight-bold"><span id="currentCity"></span>
+                        <span id="currentDate"></span></div>
                     <div id="icon"></div>
-                    <div>Temp: <span id="temp">X</span> &#8457;</div>
-                    <div>Wind: <span id="wind">Y</span> MPH</div>
-                    <div>Humidity: <span id="humidity">Z</span>&#37</div>
-                    <div>UV Index: <span id="uvIndex">W</span></div>
+                    <div>Temp: <span id="currentTemp"></span> &#8457;</div>
+                    <div>Wind: <span id="currentWind"></span> MPH</div>
+                    <div>Humidity: <span id="currentHumidity"></span>&#37</div>
+                    <div>UV Index: <span id="currentUvIndex"></span></div>
                 </div>
                 <!-- 5 day forecast will go here -->
                 <section class="row justify-content-flex five-day">
@@ -66,10 +69,12 @@
                         <div class="card">
                             <div class="border border-dark custom-border">
                                 <div id="icon"></div>
-                                <div>Date: <span id="uvIndex">W</span></div>
-                                <div>Temp: <span id="temp">X</span> &#8457;</div>
-                                <div>Wind: <span id="wind">Y</span> MPH</div>
-                                <div>Humidity: <span id="humidity">Z</span>&#37</div>
+                                <div>Date: <span id="date0"></span></div>
+                                <!-- <div>City: <span id="currentCity"></span></div> -->
+                                <div>Temp: <span id="temp0"></span> &#8457;</div>
+                                <div>Wind: <span id="wind0"></span> MPH</div>
+                                <div>Humidity: <span id="humidity0"></span>&#37</div>
+                                <!-- <div>UV Index: <span id="uvIndex1">W</span></div> -->
                             </div>
                         </div>
                     </div>
@@ -77,10 +82,12 @@
                         <div class="card">
                             <div class="border border-dark custom-border">
                                 <div id="icon"></div>
-                                <div>Date: <span id="uvIndex">W</span></div>
-                                <div>Temp: <span id="temp">X</span> &#8457;</div>
-                                <div>Wind: <span id="wind">Y</span> MPH</div>
-                                <div>Humidity: <span id="humidity">Z</span>&#37</div>
+                                <div>Date: <span id="date1"></span></div>
+                                <!-- <div>City: <span id="currentCity"></span></div> -->
+                                <div>Temp: <span id="temp1"></span> &#8457;</div>
+                                <div>Wind: <span id="wind1"></span> MPH</div>
+                                <div>Humidity: <span id="humidity1"></span>&#37</div>
+                                <!-- <div>UV Index: <span id="uvIndex2">W</span></div> -->
                             </div>
                         </div>
                     </div>
@@ -88,10 +95,12 @@
                         <div class="card">
                             <div class="border border-dark custom-border">
                                 <div id="icon"></div>
-                                <div>Date: <span id="uvIndex">W</span></div>
-                                <div>Temp: <span id="temp">X</span> &#8457;</div>
-                                <div>Wind: <span id="wind">Y</span> MPH</div>
-                                <div>Humidity: <span id="humidity">Z</span>&#37</div>
+                                <div>Date: <span id="date2"></span></div>
+                                <!-- <div>City: <span id="currentCity"></span></div> -->
+                                <div>Temp: <span id="temp2"></span> &#8457;</div>
+                                <div>Wind: <span id="wind2"></span> MPH</div>
+                                <div>Humidity: <span id="humidity2"></span>&#37</div>
+                                <!-- <div>UV Index: <span id="uvIndex3">W</span></div> -->
                             </div>
                         </div>
                     </div>
@@ -99,10 +108,12 @@
                         <div class="card">
                             <div class="border border-dark custom-border">
                                 <div id="icon"></div>
-                                <div>Date: <span id="uvIndex">W</span></div>
-                                <div>Temp: <span id="temp">X</span> &#8457;</div>
-                                <div>Wind: <span id="wind">Y</span> MPH</div>
-                                <div>Humidity: <span id="humidity">Z</span>&#37</div>
+                                <div>Date: <span id="date3"></span></div>
+                                <!-- <div>City: <span id="currentCity"></span></div> -->
+                                <div>Temp: <span id="temp3"></span> &#8457;</div>
+                                <div>Wind: <span id="wind3"></span> MPH</div>
+                                <div>Humidity: <span id="humidity3"></span>&#37</div>
+                                <!-- <div>UV Index: <span id="uvIndex4">W</span></div> -->
                             </div>
                         </div>
                     </div>
@@ -110,10 +121,12 @@
                         <div class="card">
                             <div class="border border-dark custom-border">
                                 <div id="icon"></div>
-                                <div>Date: <span id="uvIndex">W</span></div>
-                                <div>Temp: <span id="temp">X</span> &#8457;</div>
-                                <div>Wind: <span id="wind">Y</span> MPH</div>
-                                <div>Humidity: <span id="humidity">Z</span>&#37</div>
+                                <div>Date: <span id="date4"></span></div>
+                                <!-- <div>City: <span id="currentCity"></span></div> -->
+                                <div>Temp: <span id="temp4"></span> &#8457;</div>
+                                <div>Wind: <span id="wind4"></span>MPH</div>
+                                <div>Humidity: <span id="humidity4"></span>&#37</div>
+                                <!-- <div>UV Index: <span id="uvIndex5">W</span></div> -->
                             </div>
                         </div>
                     </div>
@@ -123,16 +136,12 @@
     </main>
 
 </body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="./assets/js/script.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
     crossorigin="anonymous"></script>
