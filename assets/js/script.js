@@ -42,7 +42,6 @@ function getLatLon() {
 };
 
 
-
 function currentForecast() {
     var weatherAPIUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=minutely,hourly&appid=${apiKey}`;
     fetch(weatherAPIUrl)
@@ -58,14 +57,12 @@ function currentForecast() {
             $("#currentCity").text(userSearch)
             $("#currentDate").text(currentDate)
             // CHANGE BACKGROUND COLOR OF UV INDEX DEPENDING ON SEVERITY
-            if (data.current.uvi <= 2) {
-                $("#currentUvIndex").css("color", "blue");
-            } else if (data.current.uvi >= 2.1 && data.current.uvi <= 5) {
+            if (data.current.uvi <= 3) {
                 $("#currentUvIndex").css("color", "green");
-            } else if (data.current.uvi >= 5.1 && data.current.uvi <= 7) {
+            } else if (data.current.uvi >= 3.1 && data.current.uvi <= 6) {
                 $("#currentUvIndex").css("color", "orange");
-            } else if (data.current.uvi >= 7.1 && data.current.uvi <= 10) {
-                $("#currentUvIndex").css("color", "red");
+            } else if (data.current.uvi >= 6.1 && data.current.uvi <= 10) {
+                $("#currentUvIndex").css("color", "red",);
             } else if (data.current.uvi >= 10.1) {
                 $("#currentUvIndex").css({ "color": "black", "font-size": "200%" });
             }
@@ -103,7 +100,16 @@ function currentForecast() {
         })
 };
 
-$("#SearchBtn").on('click', getLatLon);
+$("#SearchBtn").on('click', getLatLon)
+
+// SAVE TO LOCAL STORAGE
+$("#SearchBtn").on('click', function(){
+    var textToSave = $("#search-input").val();
+    localStorage.setItem("userSearch", textToSave);
+});
+
+
+
 
 
 
