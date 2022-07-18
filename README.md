@@ -35,7 +35,7 @@ Next, you can see the current weather as well as a 5-day forecast!
 ## Sources:
 [jQuery](https://api.jquery.com/addclass/)
 
-[Moment](ttps://momentjs.com/docs/#/displaying/)
+[Moment](https://momentjs.com/docs/#/displaying/)
 
 [OpenWeatherApiKeys](https://home.openweathermap.org/api_keys)
 
