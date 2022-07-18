@@ -1,4 +1,3 @@
-
 // pseudocode
 // WHEN I view current weather conditions for that city
 // https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}
@@ -28,7 +27,7 @@ var currentUvIndex = document.querySelector('#currentUvIndex');
 
 function getLatLon() {
     userSearch = $("#search-input").val()
-    var geoAPIurl = `http://api.openweathermap.org/geo/1.0/direct?q=${userSearch}&limit=5&appid=${apiKey}`
+    var geoAPIurl = `https://api.openweathermap.org/geo/1.0/direct?q=${userSearch}&limit=5&appid=${apiKey}`
     fetch(geoAPIurl)
         .then(function (response) {
             return response.json();
