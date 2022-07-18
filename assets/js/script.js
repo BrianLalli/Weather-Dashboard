@@ -12,7 +12,7 @@
 
 var apiKey = '728e469ada3cc76638230620501f3701'
 var userSearch = ""
-var testUrl = `http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=${apiKey}`
+var testUrl = `https://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=${apiKey}`
 // Value from search form
 var lat;
 var lon;
